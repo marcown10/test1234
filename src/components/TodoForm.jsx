@@ -9,37 +9,28 @@ const Form = styled.form`
 
 const Input = styled.input`
   flex: 1;
-  padding: 1rem;
-  border: 2px solid #e1e1e1;
-  border-radius: 12px;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
   font-size: 1rem;
-  transition: all 0.3s ease;
 
   &:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #4a90e2;
   }
 `
 
 const Button = styled.button`
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4a90e2;
   color: white;
   border: none;
   padding: 0 2rem;
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-  }
-
-  &:active {
-    transform: translateY(0);
+    background: #357abd;
   }
 `
 
@@ -60,7 +51,7 @@ const TodoForm = ({ addTodo }) => {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Add a new task..."
+        placeholder="Add a new todo..."
       />
       <Button type="submit">Add</Button>
     </Form>
